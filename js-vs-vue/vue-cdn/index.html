@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS TODO LIST</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+<div id="app">
+    <input type="text" id="todoText" v-model="todoText">
+    <button id="addBtn" @click="addTodo">Add Task</button>
+    <ul id="todaList">
+        <!-- ul todoListinden değerler gelecek v-for ile al ve yazdır. -->
+        <li v-for="todo in todoList" :key="todo"> {{todo}} </li>
+    </ul>
+</div>
+    <script src="app.js"></script>
+</body>
+
+</html>
