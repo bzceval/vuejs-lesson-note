@@ -22,7 +22,7 @@ const app = Vue.createApp({
                 alt: "417 kod hatası"
             },
             coords: {
-                message: "Hellü",
+                message: "Başla",
                 x: 0,
                 y: 0,
             }
@@ -44,9 +44,12 @@ const app = Vue.createApp({
         },
         /* add mouse move function */
         updateCoords(parametreMessage, event) {
+            // fonksiyon içinde fonksiyon da kullanabilirim
+            this.changeDynamicTitle(`${event.x}, ${event.y}`)
             // console.log(message, event.x, event.y)
             this.message = parametreMessage;
             this.coords = {
+                message: parametreMessage,
                 x: event.x,
                 y: event.y
             }
