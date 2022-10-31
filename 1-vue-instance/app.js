@@ -24,6 +24,8 @@ const app = Vue.createApp({
         }
     }
 }).mount("#app")
+//other use
+//app.mount("#app")
 
 //Vue2 Version
 // new Vue({
