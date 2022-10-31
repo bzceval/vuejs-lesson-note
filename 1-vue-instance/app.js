@@ -21,6 +21,11 @@ const app = Vue.createApp({
                 url: "https://www.google.com/teapot",
                 alt: "417 kod hatası"
             },
+            coords: {
+                message: "Hellü",
+                x: 0,
+                y: 0,
+            }
         }
     },
     /* Javascript fonksiyonlarını içeren key => methods  */
@@ -36,6 +41,15 @@ const app = Vue.createApp({
         changeDynamicTitle(parametreTitle) {
             // indexten gelen parametreden ile title değiştirme 
             this.title = parametreTitle;
+        },
+        /* add mouse move function */
+        updateCoords(parametreMessage, event) {
+            // console.log(message, event.x, event.y)
+            this.message = parametreMessage;
+            this.coords = {
+                x: event.x,
+                y: event.y
+            }
         }
     }
 }).mount("#app")
