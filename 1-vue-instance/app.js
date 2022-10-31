@@ -13,7 +13,14 @@ const app = Vue.createApp({
         return {
             title: "Vuejs Bootcampinde 1. gün",
             content: "Lorem ipsum dolar sit amet...",
-            url: "https://www.google.com/teapot"
+            url: "https://www.google.com/teapot",
+            eduflow: {
+                title: "Object Şeklinde Dataları Alma",
+                content: "Tıklada dinamik şekilde al",
+                target: "_blank",
+                url: "https://www.google.com/teapot",
+                alt: "417 kod hatası"
+            },
         }
     }
 }).mount("#app")

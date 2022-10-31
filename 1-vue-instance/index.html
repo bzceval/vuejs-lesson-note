@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,12 +8,21 @@
     <title>Vue Instance</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
+
 <body>
     <div id="app">
         <h1>{{title}}</h1>
         <p>{{content}}</p>
         <a target="_blank" v-bind:href="url">Googlede araştırın</a>
+        <h1>{{eduflow.title}}</h1>
+        <a 
+        v-bind:target="eduflow.target" 
+        v-bind:alt="eduflow.alt" 
+        v-bind:href="eduflow.url">
+        {{eduflow.content}}</a>
+
     </div>
     <script src="app.js"></script>
 </body>
+
 </html>
