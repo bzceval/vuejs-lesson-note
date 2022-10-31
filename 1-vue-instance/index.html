@@ -21,8 +21,20 @@
         <!-- v-bind short-cut -->
         <!-- v-bind:target yerine sadece :target yazsan olur -->
         <br><br><br>
+
         <!-- v-on:click ==> eventleri çalıştırmak istediğimde kullandığım tag -->
-        <button v-on:click="changeTitle()">Title Bilgisini Değiştirme</button>
+        <button v-on:click="sendAlert">Alert Gönderme Butonu</button>
+        <!-- bir parametre göndermezsem click eventinde parantezlere gereks yok => () -->
+        <br><br><br>
+
+        <!-- Data İçerisindeki Title Objesini Değiştirme -->
+        <button v-on:click="changeTitle()">Title Bilgisini Değiştirme 1</button>
+        <br><br><br>
+
+        <!-- Data İçerisindeki Title Objesini Değiştirme -->
+        <!-- Ama Parametre ile Gelsin -->
+        <button v-on:click="changeDynamicTitle('Bu 1. Button')">Title Bilgisini Değiştirme 1</button>
+        <button v-on:click="changeDynamicTitle('Bu 2. Button')">Title Bilgisini Değiştirme 2 </button>
     </div>
     <script src="app.js"></script>
 </body>

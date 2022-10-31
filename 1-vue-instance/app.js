@@ -26,8 +26,16 @@ const app = Vue.createApp({
     /* Javascript fonksiyonlarını içeren key => methods  */
     /* vuejs içinde fonksiyonları tanımlama */
     methods: {
-        changeTitle() {
+        sendAlert() {
             alert("Tıkla buttonu çalıştı!")
+        },
+        changeTitle() {
+            // data içerisinde vue instancesinde değiştirme this keyi ile olur. 
+            this.title = "Bu değişmiş title bilgisi"
+        },
+        changeDynamicTitle(parametreTitle) {
+            // indexten gelen parametreden ile title değiştirme 
+            this.title = parametreTitle;
         }
     }
 }).mount("#app")
