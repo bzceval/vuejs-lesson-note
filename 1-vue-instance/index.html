@@ -11,18 +11,18 @@
 
 <body>
     <div id="app">
+        <!-- Attribute bind etme -->
         <h1>{{title}}</h1>
         <p>{{content}}</p>
         <a target="_blank" v-bind:href="url">Googlede araştırın</a>
         <h1>{{eduflow.title}}</h1>
-        <a 
-        v-bind:target="eduflow.target" 
-        v-bind:alt="eduflow.alt" 
-        v-bind:href="eduflow.url">
-        {{eduflow.content}}</a>
+        <a v-bind:target="eduflow.target" v-bind:alt="eduflow.alt" v-bind:href="eduflow.url">
+            {{eduflow.content}}</a>
         <!-- v-bind short-cut -->
         <!-- v-bind:target yerine sadece :target yazsan olur -->
-
+        <br><br><br>
+        <!-- v-on:click ==> eventleri çalıştırmak istediğimde kullandığım tag -->
+        <button v-on:click="changeTitle()">Title Bilgisini Değiştirme</button>
     </div>
     <script src="app.js"></script>
 </body>

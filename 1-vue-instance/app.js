@@ -22,6 +22,13 @@ const app = Vue.createApp({
                 alt: "417 kod hatası"
             },
         }
+    },
+    /* Javascript fonksiyonlarını içeren key => methods  */
+    /* vuejs içinde fonksiyonları tanımlama */
+    methods: {
+        changeTitle() {
+            alert("Tıkla buttonu çalıştı!")
+        }
     }
 }).mount("#app")
 //other use
