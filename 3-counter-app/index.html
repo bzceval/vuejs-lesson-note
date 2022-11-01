@@ -32,6 +32,32 @@
           <!-- NOT: VIRTUAL DOM -->
           <!-- Vue instanceler içindeki (data içindeki) dataları kontrol eder ==> "Değişiklik var mı? Yok mu?" (WATCH) -->
           <!-- Eğer varsa DOM'u update eder (RENDER) edilir. -->
+          <!-- Virtual dom olmazsa tüm mount id'si yani appnin tamamı render olduğundan içerisindeki tüm fonksiyonlar istemeden sürekli olarak çalışır. -->
+          <!-- Bu durum reactivity olarak düzenlersek olur -->
+          <!-- reactivitysi "computed" anahtar kelimesi ile çalışır. data methods gibi gerekli key -->
+          <div class="row">
+          <div class="col-4 card offset-4 p-2">
+            <h3 class="text-center mt-5 mb-5">Counter1 == {{counter1}}</h3>
+            <div class="d-flex justify-content-center">
+              <button @click="counter1++" class="btn me-3 btn-dark">Artır</button>
+              <button @click="counter1--" class="btn mx-3 btn-dark">Azalt</button>
+            </div>
+            <div class="alert alert-warning text-center mt-3">
+              <!-- getCounter1Reseult() fn böyle invoke edilmez çünkü artık kendi kendine tetiklenecek bir fn -->
+                {{ getCounter1Result }}
+            </div>
+          </div>
+          <div class="col-4 card offset-4 p-2">
+            <h3 class="text-center mt-5 mb-5">Counter2 == {{counter2}}</h3>
+            <div class="d-flex justify-content-center">
+              <button @click="counter2++" class="btn me-3 btn-dark">Artır</button>
+              <button @click="counter2--" class="btn mx-3 btn-dark">Azalt</button>
+            </div>
+            <div class="alert alert-warning text-center mt-3">
+                {{ getCounter2Result  }}
+            </div>
+          </div>
+        </div>
         </div>
       </div>
     </div>
