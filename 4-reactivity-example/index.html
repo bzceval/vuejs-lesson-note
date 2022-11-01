@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-4 offset-4 p-2 card">
+                    <h5 class="text-danger text-center">Reactivitysiz</h5>
+                    <input type="text" v-model="search" @keydown="searchList" >
+                    <button @click="searchList" class="btn btn-danger mt-2">Arama</button>
+                    <pre class="mt-5">
+                        {{itemList}}
+                    </pre>
+                    <h6>Filterele: {{filtered}}</h6>
+                </div>
+                <div class="col-4 offset-4 p-2 my-5 card">
+                    <h5 class="text-primary text-center">Reactivity ile</h5>
+                    <input type="text" v-model="searchReactivity" >
+                    <button class="btn btn-primary mt-2">Arama</button>
+                    <pre class="mt-5">
+                        {{itemList}}
+                    </pre>
+                    <h6>Filterele: {{filteredList}}</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
