@@ -31,5 +31,8 @@ const app = Vue.createApp({
     // this.counter1 ++;
     return this.counter2 > 5 ? "Büyük" : "Küçük"
    }
+   // computed nasıl çalışır? herkes kendi kafasına göre çalışır :D
+   // counterları kontrol eder eğer bir değişiklik varsa değiştirir.
+   // ama method öyle değil.
    }
 }).mount("#app")
